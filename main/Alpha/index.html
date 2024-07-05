@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+      <div class="innercontainer">
+        <div class="card">
+          <div class="card-details">
+            <img src="/images/breakblock_img.png" style="width: 25vw;">
+            <p class="text-title">Breakblock!</p>
+            <p class="text-body">블록을 부수며 스트레스를 날려보세요!</p>
+          </div>
+          <button class="card-button" onclick="window.open('./game5/game5.html', '_blank')">게임 플레이하기!</button>
+        </div>
+      </div>
+      <div class="innercontainer">
+        <div class="card">
+          <div class="card-details">
+            <img src="/images/dinogmae_img.png" style="width: 25vw;">
+            <p class="text-title">Dinogame!</p>
+            <p class="text-body">전방에서 다가오는 선인장을 피하세요!</p>
+          </div>
+          <button class="card-button" onclick="window.open('./game4/game4.html', '_blank')">게임 플레이하기!</button>
+        </div>
+      </div>
+      <div class="innercontainer">
+        <div class="card">
+          <div class="card-details">
+            <img src="/images/snakegame_img.png" style="width: 25vw;">
+            <p class="text-title">Snakegame!</p>
+            <p class="text-body">지렁이에게 먹이를 먹여서 크게 키워보세요!</p>
+          </div>
+          <button class="card-button" onclick="window.open('./game3/game3.html', '_blank')">게임 플레이하기!</button>
+        </div>
+      </div>
+      <div class="innercontainer">
+        <div class="card">
+          <div class="card-details">
+            <img src="/images/RSP_img.jpg" style="width: 20vw;">
+            <p class="text-title">Rock Paper Scissors!</p>
+            <p class="text-body">컴퓨터와 신나는 가위바위보!</p>
+          </div>
+          <button class="card-button" onclick="window.open('./game1/game1.html', '_blank')">게임 플레이하기!</button>
+        </div>
+      </div>
+      <div class="innercontainer">
+        <div class="card">
+          <div class="card-details">
+            <img src="/images/flappybird_img.webp" style="width: 25vw;">
+            <p class="text-title">Flappybird!</p>
+            <p class="text-body">새와 함께 신나는 여정을 떠나세요!</p>
+          </div>
+          <button class="card-button" onclick="window.open('./game2/game2.html', '_blank')">게임 플레이하기!</button>
+        </div>
+      </div>
+    </div>
+
+  <div class="leftarrow">
+    <div class="arrow-top"></div>
+    <div class="arrow-bottom"></div>
+  </div>
+  <div class="rightarrow">
+    <div class="arrow-top"></div>
+    <div class="arrow-bottom"></div>
+  </div>
+  
+  <script>
+    let currentPosition = 0;
+    const maxSlides = 4; // 최대 슬라이드 횟수
+    const slideWidth = 100; // 슬라이드 폭 (vw 단위)
+
+    document.querySelector('.rightarrow').addEventListener('click', function() {
+        if (currentPosition > -maxSlides * slideWidth) { // 최대 오른쪽 슬라이드를 넘지 않도록 조건 설정
+            currentPosition -= slideWidth; // 오른쪽으로 이동할 때는 음수로 이동
+            document.querySelector('.container').style.transform = `translateX(${currentPosition}vw)`;
+        }
+    });
+
+    document.querySelector('.leftarrow').addEventListener('click', function() {
+        if (currentPosition < 0) { // 최대 왼쪽 슬라이드를 넘지 않도록 조건 설정
+            currentPosition += slideWidth; // 왼쪽으로 이동할 때는 양수로 이동
+            document.querySelector('.container').style.transform = `translateX(${currentPosition}vw)`;
+        }
+    });
+
+    document.querySelector('.card-button').addEventListener('click', function() {
+      window.open('./')
+    });
+  </script>
+</body>
+
+</html>

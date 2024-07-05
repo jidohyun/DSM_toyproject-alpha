@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Breaker Game</title>
+    <style>
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+      #gameOver,
+      #congrats {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <div id="gameOver">
+      <h2>GAME OVER</h2>
+      <button onclick="restartGame()">Restart</button>
+      <button onclick="exitGame()">Exit</button>
+    </div>
+    <div id="congrats">
+      <h2>CONGRATULATIONS! YOU WIN!</h2>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

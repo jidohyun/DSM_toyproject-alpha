@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <style>
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+      #gameOver {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="gameOver">
+      <h2>GAME OVER</h2>
+      <button onclick="restartGame()">Restart</button>
+    </div>
+    <script src="flappybird.js"></script>
+  </body>
+</html>
